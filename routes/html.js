@@ -1,16 +1,16 @@
-const html = require('express').Router();
+const router = require('express').Router();
 const path = require('path');
 
 // GET /notes
 
-app.get('/notes', function(req, res) {
+router.get('/notes', function(req, res) {
     res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
 
 // GET *
 
-app.get('/', (req, res) =>
+router.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
-module.exports = html;
+module.exports = router;
