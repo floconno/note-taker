@@ -5,9 +5,9 @@ const uuid = require('../helpers/uuid');
 
 
 // GET /api/notes 
-app.get('/api/notes', function(req, res) {
-
-});
+app.get('/', (req, res) => {
+    readFromFile('./').then((data) => res.json(JSON.parse(data)));
+  });
 
 // POST /api/notes
 
