@@ -10,7 +10,7 @@ notes.get('/', (req, res) => {
 });
 
 
-
+module.exports = notes;
 
 
 
